@@ -1,9 +1,7 @@
+LIBJSON_ROOT = ["."]
 cc_library_shared {
     name: "libjson",
-    header_libs: [
-        "device_kernel_headers",
-    ],
-    export_include_dirs: ["."],
+    include_dirs: [TARGET_OUT_INTERMEDIATES + "/KERNEL_OBJ/usr/include"],
     srcs: [
         "arraylist.c",
         "debug.c",
